@@ -1,0 +1,23 @@
+#GIT IGNORE
+fullclean.bat
+runcheck.bat
+linecount.bat
+build.bat
+buildmake.bat
+run.bat
+rungdb.bat
+data/ClusterLogAll.txt
+data/ClusterLogSmall.txt
+project_vs2013/
+project_vs2013/*
+Testing/
+lib/gtest-1.7.0/build_tmp
+CMakeFiles/
+doc/
+CTestTestfile.cmake
+cmake_install.cmake
+CMakeCache.txt
+compile_commands.json
+Makefile
+bin/LUCIDCalibrate.exe
+log.txt
