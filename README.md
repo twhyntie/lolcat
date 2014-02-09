@@ -49,4 +49,4 @@ datasets.
 
 ##External libraries used
 
-* Boost - `Filesystem` - Under the Boost Licence - (Filesystem)[http://www.boost.org/doc/libs/1_55_0/libs/filesystem/doc/index.htm]
+* Boost - `Filesystem` - Under the Boost Licence - [Filesystem](http://www.boost.org/doc/libs/1_55_0/libs/filesystem/doc/index.htm)
