@@ -1,7 +1,7 @@
 Langton's Own LUCID Calibration Analysis for Timepix (LOLCAT)
 =============================================================
 
-* Issued nder the (2-clause BSD license)
+* Issued under the (2-clause BSD license)
 * Written by Hector Stalker
 
 ##Introduction
@@ -15,7 +15,47 @@ The code is written in `C++11`.
 
 ##Compilation instructions
 
-PLEASE COMPLETE THIS.
+If you are prompted for a password anywhere in this setup process, please enter it.
+
+* The user will need the GCC compiler installed, which can be done by opening the terminal and typing:
+
+        sudo apt-get install build-essential
+
+* The user will need CMake installed, which can be done by opening the terminal and typing:
+
+        sudo apt-get install cmake
+
+* The user will need boost filesystem installed, which can be done on Ubuntu (or Linux in general) by entering the terminal and typing:
+
+        sudo apt-get install libboost-all-dev
+
+* The user will need git installed, which can be done by typing into the terminal:
+
+        sudo apt-get install git
+
+
+* The repository can be grabbed from the github repository using git by opening the terminal and typing:
+
+        git clone git://github.com/avaritia/lolcat.git
+
+* After cloning the repository to your computer, you need to enter the directory of the lolcat project by typing:
+
+        cd ./lolcat
+
+* Then in that same terminal window type:
+
+        cmake -G "Unix Makefiles"
+
+Wait until the terminal says that 'the build files have been written....' etc.
+
+* Next type:
+
+        make all
+
+and wait for the program to finish running (it will say 'Built target lolcat')
+
+
+Now lolcat has been successfully compiled, and resides in the /bin/ folder in the lolcat project directory.
 
 ##Generating the documentation
 
@@ -23,29 +63,44 @@ To generate the code documentation, type:
 
     doxygen Doxygen
 
+OR
+
+Use the cmake generated makefile, like so (so after you've run: 'cmake -G "Unix Makefiles"'):
+
+    make doc
+
 To view the code documentation, open a web browser from the command line and navigate to the automatically-generated html page:
 
     firefox doc/html/index.html &
 
 ##Running the code
 
-Run like so:
+Run like so from the main lolcat directory using the terminal (see compilation instructions to find out how to get there):
 
-    lolcat -t "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
+    bin/lolcat -t "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
 
 in order to generate a wiki table entry.
 
 --OR--
 
-    lolcat -c "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
+    bin/lolcat -c "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
 
 in order to generate calibration information.
 
-Note the specified folder layout. This exact layout is necessary in order to generate a correct table entry,
-as the settings and detector name are grabbed from the path tot he cluster log given into the program.
-The path should be formatted so that: DetectorName/Data/SettingsUsed, Where only DetectorName and SettingsUsed
-change depending on the dataset. This is done for eas of use, as it matches the layout of the current test
+##Note
+Currently there is a strictly specified folder layout.
+
+This exact layout is necessary in order to generate a correct table entry, as the settings and detector name are
+grabbed from the path to the cluster log given into the program at run-time.
+
+The path should be formatted so that: `DetectorName/Data/SettingsUsed`, where only DetectorName and SettingsUsed change
+depending on the dataset.
+
+This is done for ease of use, as it matches the layout of the current test
 datasets.
+
+You can mimic the example test data set in the /data/ folder if you so wish in order to get started, but remember to
+add the "data/" to the beginning of the string specifying the path/directory of the data if done so.
 
 ##External libraries used
 

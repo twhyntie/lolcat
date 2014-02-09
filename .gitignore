@@ -11,7 +11,6 @@ data/ClusterLogSmall.txt
 project_vs2013/
 project_vs2013/*
 Testing/
-lib/gtest-1.7.0/build_tmp
 CMakeFiles/
 doc/
 CTestTestfile.cmake
