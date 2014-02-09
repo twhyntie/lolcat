@@ -1,4 +1,6 @@
 #GIT IGNORE
+
+# Windows files
 fullclean.bat
 runcheck.bat
 linecount.bat
@@ -6,17 +8,26 @@ build.bat
 buildmake.bat
 run.bat
 rungdb.bat
-data/ClusterLogAll.txt
-data/ClusterLogSmall.txt
 project_vs2013/
 project_vs2013/*
+
+# Testing
+data/ClusterLogAll.txt
+data/ClusterLogSmall.txt
 Testing/
+
+# Build files
 CMakeFiles/
-doc/
 CTestTestfile.cmake
 cmake_install.cmake
 CMakeCache.txt
 compile_commands.json
 Makefile
 bin/LUCIDCalibrate.exe
+bin/lolcat
+
+# Output
 log.txt
+
+# Documentation
+doc/

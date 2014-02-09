@@ -75,19 +75,33 @@ To view the code documentation, open a web browser from the command line and nav
 
 ##Running the code
 
+### Test data
+
+To run on the test data supplied with the repo, use the following commands:
+
+    ./bin/lolcat -t data/TestDetector/Data/Ikrum\=1\,\ TpxClock\=16\ 55\ Fe/ClusterLogAll.txt
+
+This will output a wiki table entry to the terminal that you can copy and paste directly into the wiki.
+
+    ./bin/lolcat -c data/TestDetector/Data/Ikrum\=1\,\ TpxClock\=16\ 55\ Fe/ClusterLogAll.txt
+
+### General running
+
 Run like so from the main lolcat directory using the terminal (see compilation instructions to find out how to get there):
 
-    bin/lolcat -t "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
+    ./bin/lolcat -t "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
 
 in order to generate a wiki table entry.
 
 --OR--
 
-    bin/lolcat -c "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
+    ./bin/lolcat -c "DetectorName/Data/SettingsUsed/ClusterLogAll.txt"
 
 in order to generate calibration information.
 
-##Note
+
+##A note on the data folder structures
+
 Currently there is a strictly specified folder layout.
 
 This exact layout is necessary in order to generate a correct table entry, as the settings and detector name are
@@ -99,8 +113,6 @@ depending on the dataset.
 This is done for ease of use, as it matches the layout of the current test
 datasets.
 
-You can mimic the example test data set in the /data/ folder if you so wish in order to get started, but remember to
-add the "data/" to the beginning of the string specifying the path/directory of the data if done so.
 
 ##External libraries used
 
